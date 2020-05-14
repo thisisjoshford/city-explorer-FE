@@ -1,22 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchCity } from '../../services/apiFetch';
 
-const Search = ({ cityName, onChange, onSubmit }) => (
+const Search = () => {
+  const dispatch = useDispatch();
+  const [city, setCity] = useState('');
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(fetchCity(city));
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        <input type="text"
+          name="citySearch"
+          placeholder="enter city"
+          value={city}
+          onChange={({ target }) => setCity(target.value)}
+        >
+        </input>
+      </label>
+      <button>GO!</button>
+    </form>
+
+  );
   
-  <form onSubmit={onSubmit}>
-    <label>
-      <input type="text"
-        name="citySearch"
-        placeholder="enter city"
-        value={cityName}
-        onChange={onChange}
-      >
-      </input>
-    </label>
-    <button>GO!</button>
-  </form>
 
-);
+};
 
 Search.propTypes = {
   cityName: PropTypes.string.isRequired,
