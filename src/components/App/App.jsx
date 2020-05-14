@@ -4,7 +4,7 @@ import Search from '../Search/Search';
 export default function App() {
   return (
     <>
-      <h1>CITY EXPLORER!</h1>
+      <h3>Whats going down in your town?</h3> 
       <Search />
     </>
   );

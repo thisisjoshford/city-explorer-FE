@@ -1,7 +1,18 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reducer from './reducers';
+
+//(store) is redux store | (next) moves to the next step in the middleware | (action) is what was dispatched
+const functionDispatchMiddleware = store => next => action => {
+  if(typeof action !== 'function') return next(action);
+  action(store.dispatch);
+};
+
+//redux-devtools-extension advanced store setup
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default createStore(
   reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeEnhancers(
+    applyMiddleware(functionDispatchMiddleware)
+  )
 );

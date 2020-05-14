@@ -11,6 +11,8 @@ const Search = () => {
     dispatch(searchCity(city));
   };
 
+  console.log(city);
+
   return (
     <form onSubmit={handleSubmit}>
       <label>

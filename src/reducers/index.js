@@ -1,13 +1,12 @@
-import { fetchCity } from '../services/apiFetch';
-
 const initialState = { 
-  city: {}
+  cityData: {}
+  weather:
 };
 
 export default function stateReducer(state = initialState, action) {
   switch(action.type) {
     case 'SEARCH':
-      return { ...state, city: action.payload };
+      return { ...state, cityData: action.payload };
     default:
       return state;
   }
