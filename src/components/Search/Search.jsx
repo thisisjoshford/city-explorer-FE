@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchCity } from '../../services/apiFetch';
+import { searchCity } from '../../actions/searchActions';
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -8,7 +8,7 @@ const Search = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(fetchCity(city));
+    dispatch(searchCity(city));
   };
 
   return (
@@ -24,15 +24,6 @@ const Search = () => {
       </label>
       <button>GO!</button>
     </form>
-
   );
-  
-
-};
-
-Search.propTypes = {
-  cityName: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
 };
 export default Search;

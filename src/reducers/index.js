@@ -7,7 +7,7 @@ const initialState = {
 export default function stateReducer(state = initialState, action) {
   switch(action.type) {
     case 'SEARCH':
-      return { ...state, city: fetchCity(action.payload) };
+      return { ...state, city: action.payload };
     default:
       return state;
   }
