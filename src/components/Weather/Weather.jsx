@@ -6,18 +6,19 @@ import styles from './WeatherStyles.css';
 const Weather = () => {
   const forecast = useSelector(getWeather);
 
-  const forecastCards = forecast.map((card, i) => (
+  const forecastCards = forecast.map((day, i) => (
     <div key={i} className={styles.Weather}>
+      <h2>{day.time}</h2>
       <img></img>
       <div className={styles.Temp}>
-        <h3>{Math.round(card.high)}°</h3>
+        <h3>{Math.round(day.high)}°</h3>
         <p>High</p>
       </div>
       <div className={styles.Temp}>
-        <h3>{Math.round(card.low)}°</h3>
+        <h3>{Math.round(day.low)}°</h3>
         <p>Low</p>
       </div>
-      <h5>💧{Math.round(card.precipitation * 100)}%</h5>
+      <h5>💧{Math.round(day.precipitation * 100)}%</h5>
     </div>
   ));
   return (
