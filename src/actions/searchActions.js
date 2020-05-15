@@ -6,13 +6,13 @@ export const searchCity = (city) => dispatch => {
       dispatch({
         type: 'SEARCH',
         payload: {
-          city: res.city,
-          lat: res.latitude,
-          lng: res.longitude,
+          city: res.cityName,
+          lat: res.lat,
+          lng: res.lng,
           weather: res.weather,
-          trails: res.trailData.results,
-          yelp: res.yelpData.results,
-          events: res.eventData.results
+          trails: res.trails.results,
+          yelp: res.yelp.results,
+          events: res.events.results
         }
       });
     });

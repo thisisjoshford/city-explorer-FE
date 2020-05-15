@@ -18,7 +18,7 @@ const Weather = () => {
         <h3>{Math.round(day.low)}°</h3>
         <p>Low</p>
       </div>
-      <h5>💧{Math.round(day.precipitation * 100)}%</h5>
+      <h5>💧{Math.round(day.precip * 100)}%</h5>
     </div>
   ));
   return (

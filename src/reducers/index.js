@@ -12,7 +12,7 @@ export default function stateReducer(state = initialState, action) {
   switch(action.type) {
     case 'SEARCH':
       return { ...state, 
-        city: action.payload.city,
+        cityName: action.payload.cityName,
         lat: action.payload.lat,
         lng: action.payload.lng,
         weather: action.payload.weather,
