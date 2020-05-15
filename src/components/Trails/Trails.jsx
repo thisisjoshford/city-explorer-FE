@@ -1,8 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getTrails } from '../../selectors/selectors';
+import styles from './TrailsStyles.css';
 
-const Weather = () => {
+const Trails = () => {
   const trails = useSelector(getTrails);
 
   const trailListings = trails.map((trail, i) => (
@@ -17,7 +18,7 @@ const Weather = () => {
   ));
   return (
     <>
-      <table>
+      <table className={styles.Trails}>
         <tr>
           <th>Length</th>
           <th>Name</th>
@@ -28,9 +29,8 @@ const Weather = () => {
         </tr>
         { trailListings }
       </table>
-      
     </>
   );
 };
 
-export default Weather;
+export default Trails;

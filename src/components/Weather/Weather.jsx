@@ -10,11 +10,11 @@ const Weather = () => {
     <div key={i} className={styles.Weather}>
       <h2>{day.time}</h2>
       <img></img>
-      <div className={styles.Temp}>
+      <div id="tempHigh"className={styles.Temp}>
         <h3>{Math.round(day.high)}°</h3>
         <p>High</p>
       </div>
-      <div className={styles.Temp}>
+      <div id="tempLow"className={styles.Temp}>
         <h3>{Math.round(day.low)}°</h3>
         <p>Low</p>
       </div>
