@@ -1,0 +1,40 @@
+.Weather{
+  display: inline-block;
+  max-width: 4.5rem;
+  max-height: 15rem;
+  margin-left: 2rem;
+  vertical-align: auto;
+
+  h5{
+    margin-top: 0px;
+    margin-left: 1rem;
+    font-size: medium;
+  }
+}
+
+.Temp{
+  border: solid black 1px;
+  border-radius: 10%;
+  box-shadow: 4px 4px black;
+  margin-left: .5rem;
+  margin-bottom: .5rem;
+  padding: .8rem;
+  width: 4vw;
+  height: 3vw;
+  text-align: center;
+  font-size: x-large;
+  background-color: #6f84ff;
+  color: white;
+
+    h3{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p{
+      font-size: small;
+      margin-top: 0;
+      margin-left: .2rem;
+      text-align: left;
+    }
+}
