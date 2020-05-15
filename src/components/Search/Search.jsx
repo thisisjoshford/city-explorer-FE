@@ -6,12 +6,10 @@ const Search = () => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searchCity(city));
   };
-
-  console.log(city);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -28,4 +26,5 @@ const Search = () => {
     </form>
   );
 };
+
 export default Search;
