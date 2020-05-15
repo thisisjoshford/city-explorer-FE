@@ -14,7 +14,8 @@ const Search = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        <input type="text"
+        <input
+          type="text"
           name="citySearch"
           placeholder="enter city"
           value={city}
