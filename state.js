@@ -5,6 +5,15 @@ const sampleState = {
     lastName: 'Ford',
     email: 'thisisjoshford@gmail.com',
     role: 'foodie',
+    website: '',
+    address: {
+      street: '',
+      city: '',
+      state: '',
+      zip: 0
+    },
+    area: 'NW',
+    description: '',
     favRestaurants: [
       'restID123245',
       'restID1234ew',
@@ -12,10 +21,12 @@ const sampleState = {
   },
   messages: [
     {
-      title: ''
+      title: '',
+      body: '',
+      link: '/restaurant/dishID',
+      active: true
     }
   ],
-  //object with array of dishes
   cart: {
     dishes:[
       {
@@ -32,7 +43,6 @@ const sampleState = {
     total: 2250,
     orderDate: 1234215
   },
-  //array of restaurant objects
   restaurants: [
     {
       id: 'rest1234',
