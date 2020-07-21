@@ -1,0 +1,17 @@
+.Trails{
+ border: solid 1px black;
+ text-align: center;
+ border-spacing: 5px;
+ box-shadow: 4px 4px rgb(131, 131, 131);
+ font-family: 'Dosis', sans-serif;
+
+ th{
+   background-color: rgb(189, 245, 189);
+ }
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  td{
+    padding: .33rem;
+  }
+}
